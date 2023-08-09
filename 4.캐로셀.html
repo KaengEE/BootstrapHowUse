@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 페비콘 -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- 부트스트랩 JS(스타일이 아닌 동적인 변화) -->
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <title>캐로셀 Carousel (이미지회전)</title>
+    <style>
+      .c-img {
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 캐로셀 -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <!-- 인디케이터 -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <!-- 캐로셀이너 -->
+      <div class="carousel-inner" style="height: 100vh">
+        <div class="carousel-item active h-100" data-bs-interval="5000">
+          <img src="img/dog1.jpg" class="d-block w-100 c-img" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="display-1">강아지</h5>
+            <p>강아지귀여워.</p>
+          </div>
+        </div>
+        <div class="carousel-item h-100" data-bs-interval="5000">
+          <img src="img/dog2.jpg" class="d-block w-100 c-img" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="display-1">옆집강아지</h5>
+            <p>강아지귀여워.</p>
+          </div>
+        </div>
+        <div class="carousel-item h-100" data-bs-interval="5000">
+          <img src="img/dog3.jpg" class="d-block w-100 c-img" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="display-1">뛰는강아지</h5>
+            <p>강아지귀여워.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 좌우 컨트롤 버튼 -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <!-- 글자는 안보임 -->
+        <span class="visually-hidden">이전</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">다음</span>
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- 부트스트랩 JS(스타일이 아닌 동적인 변화) -->
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <title>components 복습</title>
+    <style>
+      .c-img {
+        height: 100%;
+        object-fit: cover;
+      }
+      #carouse,
+      .card {
+        margin-top: 50px;
+      }
+      #linklist .row div {
+        background: blueviolet;
+        padding: 1rem;
+        border: 1px solid white;
+        font-weight: 600;
+        color: white;
+        border-radius: 7px;
+        margin: 1rem 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:link {
+        color: pink;
+      }
+      a:visited {
+        color: #333;
+      }
+      a:hover {
+        color: palevioletred;
+      }
+      a:active {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-sm fixed-top"
+      id="nav-scroll"
+      style="background-color: blueviolet"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">💛Cute💛</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#card">카드</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#in">참가</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#level">순위</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="carouse" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouse"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouse"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouse"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner" style="height: 500px">
+        <!-- 첫번째사진 -->
+        <div class="carousel-item active h-100" data-bs-interval="5000">
+          <img src="img/dog1.jpg" class="d-block w-100 c-img" alt="" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>강아지</h5>
+            <p>강아지 귀여워</p>
+          </div>
+        </div>
+        <!-- 두번째사진 -->
+        <div class="carousel-item h-100" data-bs-interval="5000">
+          <img src="img/cat.jpg" class="d-block w-100 c-img" alt="" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>고양이</h5>
+            <p>고양이 귀여워</p>
+          </div>
+        </div>
+        <!-- 세번째사진 -->
+        <div class="carousel-item h-100" data-bs-interval="5000">
+          <img src="img/raddit.jpg" class="d-block w-100 c-img" alt="" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>토끼</h5>
+            <p>토끼 귀여워</p>
+          </div>
+        </div>
+      </div>
+      <!-- 좌우 컨트롤 버튼 -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouse"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <!-- 글자는 안보임 -->
+        <span class="visually-hidden">이전</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouse"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">다음</span>
+      </button>
+    </div>
+    <!-- 브레드크럼 -->
+    <div class="container py-5">
+      <h6 class="text-center">브레드 크럼 작동안함!</h6>
+      <nav>
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Blong</a></li>
+          <li class="breadcrumb-item"><a href="#">Post</a></li>
+        </ol>
+      </nav>
+    </div>
+    <!-- 경고박스 -->
+    <div class="alert alert-danger d-flex alert-dismissible fade show">
+      <svg
+        width="24"
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+        ></path>
+      </svg>
+      <div class="ps-3">너무 귀여워서 심장이 아플 수 있음!!</div>
+      <button class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    <!-- 카드 -->
+    <section id="card">
+      <div class="text-center py-5">
+        <h3>👇귀여운 카드👇</h3>
+        <p>귀여운 동물 카드 설명설명</p>
+      </div>
+      <!-- 카드 정렬 d-flex justify-content-center -->
+      <div class="row pd-5">
+        <!-- 첫번째카드 -->
+        <div class="col-lg-4 col-md-6 col-mb-4">
+          <div class="card shadow">
+            <img src="img/dog2.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <div class="card-header">강아지🐶</div>
+              <h4 class="card-title text-center py-2">우리집 강아지</h4>
+              <p class="card-text">
+                강아지 귀여워 강아지 귀여워 강아지 귀여워 강아지 귀여워 강아지
+                귀여워 강아지 귀여워 강아지 귀여워 강아지 귀여워 강아지 귀여워
+                강아지 귀여워 강아지 귀여워 강아지 귀여워
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 두번째카드 -->
+        <div class="col-lg-4 col-md-6 col-mb-4">
+          <div class="card shadow">
+            <img src="img/cat1.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <div class="card-header">고양이🐱</div>
+              <h4 class="card-title text-center py-2">니네집 고양이</h4>
+              <p class="card-text">
+                고양이 귀여워 고양이 귀여워 고양이 귀여워 고양이 귀여워 고양이
+                귀여워 고양이 귀여워 고양이 귀여워 고양이 귀여워 고양이 귀여워
+                고양이 귀여워 고양이 귀여워 고양이 귀여워
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 세번째카드 -->
+        <div class="col-lg-4 col-md-6 col-mb-4">
+          <div class="card shadow">
+            <img src="img/raddit.jpg" alt="" class="card-img-top" />
+            <div class="card-body">
+              <div class="card-header">토끼🐰</div>
+              <h4 class="card-title text-center py-2">친구집 토끼</h4>
+              <p class="card-text">
+                토끼도 귀여워 토끼도 귀여워 토끼도 귀여워 토끼도 귀여워 토끼도
+                귀여워 토끼도 귀여워 토끼도 귀여워 토끼도 귀여워 토끼도 귀여워
+                토끼도 귀여워 토끼도 귀여워 토끼도 귀여워
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <hr />
+    <section id="in">
+      <div class="container d-flex justify-content-center py-5">
+        <button
+          class="btn btn-primary"
+          data-bs-target="#cute"
+          data-bs-toggle="modal"
+        >
+          귀여움에 참가하기
+        </button>
+      </div>
+    </section>
+    <div class="modal fade" id="cute" data-bs-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">당신은 귀여운가요?</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p>당신은 귀엽습니다.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-dismiss="modal">
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- 프로그래스바 -->
+    <section>
+      <div class="container py-5">
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped bg-danger progress-bar-animated"
+            style="width: 80%"
+          >
+            귀여움 수치
+          </div>
+        </div>
+        <br />
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped bg-dark"
+            style="width: 10%"
+          >
+            불운 수치
+          </div>
+        </div>
+        <br />
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped bg-notice"
+            style="width: 90%"
+          >
+            행운수치
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 테이블 -->
+    <section id="level">
+      <h3 class="text-center">🎀순위🎀</h3>
+      <table class="table justify-content-center">
+        <thead>
+          <tr>
+            <th scope="col">순위</th>
+            <th scope="col">종</th>
+            <th scope="col">이름</th>
+            <th scope="col">점수</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <th scope="row">1위</th>
+            <td>고양이</td>
+            <td>키티</td>
+            <td>89점</td>
+          </tr>
+          <tr>
+            <th scope="row">2위</th>
+            <td>강아지</td>
+            <td>밍키</td>
+            <td>86점</td>
+          </tr>
+          <tr>
+            <th scope="row">3위</th>
+            <td>토끼</td>
+            <td>깡총이</td>
+            <td>85점</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- 페이지네이션 -->
+    <div class="container py-5">
+      <nav>
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a href="#" class="page-link">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item active">
+            <a href="#" class="page-link">1</a>
+          </li>
+          <li class="page-item">
+            <a href="#" class="page-link">2</a>
+          </li>
+          <li class="page-item">
+            <a href="#" class="page-link">3</a>
+          </li>
+          <li class="page-item">
+            <a href="#" class="page-link">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <br />
+    <br />
+    <hr />
+    <!-- 그룹버튼 -->
+    <!-- 가운데정렬 날 괴롭힌 코드 ㅠㅠ
+      class="container d-flex justify-content-center py-5" -->
+    <div class="container d-flex justify-content-center py-5">
+      <div class="btn-group">
+        <button class="btn btn-primary">강아지</button>
+        <button class="btn btn-secondary">고양이</button>
+        <button class="btn btn-primary">토끼</button>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <hr />
+    <h1 class="text-center">👇복습 페이지 링크👇</h1>
+    <br />
+    <div class="container-fluid" id="linklist">
+      <div class="row">
+        <div
+          class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12"
+          style="text-decoration: none"
+        >
+          <a href="1.경고창.html">경고창</a>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+          <a href="2.버튼.html">버튼</a>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+          <a href="3.어코디언.html">어코디언</a>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+          <a href="4.캐로셀.html">캐로셀</a>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+          <a href="5.카드.html">카드</a>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+          <a href="6.모달창.html">모달창</a>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+          <a href="7.스피너.html">스피너</a>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+          <a href="8.네브바.html">네브바</a>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+          <a href="9.페이지네이션.html">페이지네이션</a>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+          <a href="10.브레드크럼.html">브레드크럼</a>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
+          <a href="11.프로그래스바.html">프로그래스바</a>
+        </div>
+      </div>
+    </div>
+    <!-- 푸터 -->
+    <footer class="bg-dark">
+      <div class="container text-center">
+        <p class="mb-0 py-3 fs-5 text-light">
+          © 2023 캥이의 하루 All rights reserved.
+          <a
+            href="https://blog.naver.com/coding_ori"
+            class="text-light fst-italic"
+            target="_blank"
+            >MyBlog</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

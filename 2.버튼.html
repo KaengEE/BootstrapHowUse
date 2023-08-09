@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 페비콘 -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- 부트스트랩 JS(스타일이 아닌 동적인 변화) -->
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <title>버튼 button</title>
+    <style>
+      body {
+        padding: 3rem;
+      }
+
+      button {
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+      }
+      .btn-group-vertical button {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 기본버튼 -->
+    <button class="btn">Transparent</button>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-warning">Warning</button>
+    <button class="btn btn-info">Info</button>
+    <button class="btn btn-light">Light</button>
+    <button class="btn btn-dark">Dark</button>
+    <button class="btn btn-link">link</button>
+
+    <br />
+
+    <!-- BUTTON OUTLINE -->
+
+    <button class="btn btn-outline-primary">Primary</button>
+    <button class="btn btn-outline-secondary">Secondary</button>
+    <button class="btn btn-outline-success">Success</button>
+    <button class="btn btn-outline-danger">Danger</button>
+    <button class="btn btn-outline-warning">Warning</button>
+    <button class="btn btn-outline-info">Info</button>
+    <button class="btn btn-outline-light">Light</button>
+    <button class="btn btn-outline-dark">Dark</button>
+
+    <!-- BUTTON SIZES -->
+
+    <button class="btn btn-primary btn-lg">Large Button</button>
+    <button class="btn btn-primary">Regular Button</button>
+    <button class="btn btn-primary btn-sm">Small Button</button>
+
+    <hr />
+    <br />
+
+    <!-- BLOCK BUTTONS 블록버튼 d-grid 안에 있는 버튼 -->
+
+    <div class="d-grid">
+      <button class="btn btn-primary">Button</button>
+      <button class="btn btn-primary">Button</button>
+    </div>
+
+    <!-- TOGGLING BUTTON -->
+
+    <button class="btn btn-primary" data-bs-toggle="button">
+      Toggle button
+    </button>
+
+    <hr />
+    <br />
+
+    <!-- BUTTON GROUP 버튼들을 모아서 부모가 btn-group -->
+    <div class="btn-group">
+      <button class="btn btn-primary">left</button>
+      <button class="btn btn-secondary">middle</button>
+      <button class="btn btn-primary">right</button>
+    </div>
+    <div class="btn-group">
+      <button class="btn btn-danger">left</button>
+      <button class="btn btn-info">middle</button>
+      <button class="btn btn-warning">right</button>
+    </div>
+    <!-- BUTTON GROUP SIZING -->
+
+    <div class="btn-group btn-group-lg">
+      <button class="btn btn-primary">left</button>
+      <button class="btn btn-primary">middle</button>
+      <button class="btn btn-primary">right</button>
+    </div>
+
+    <div class="btn-group btn-group-sm">
+      <button class="btn btn-primary">left</button>
+      <button class="btn btn-primary">middle</button>
+      <button class="btn btn-primary">right</button>
+    </div>
+
+    <hr />
+    <br />
+
+    <!-- VERTICAL BUTTON GROUP : 버튼이 세로로 그룹화 -->
+
+    <div class="btn-group-vertical">
+      <button class="btn btn-primary">Top</button>
+      <button class="btn btn-primary">Middle</button>
+      <button class="btn btn-primary">Bottom</button>
+    </div>
+  </body>
+</html>

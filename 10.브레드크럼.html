@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 페비콘 -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- 부트스트랩 JS(스타일이 아닌 동적인 변화) -->
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <title>BREADCRUMB</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <!-- BREADCRUMB -->
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Blog</a></li>
+          <li class="breadcrumb-item">Post</li>
+        </ol>
+      </nav>
+      <!-- 커스텀 -->
+      <nav style="--bs-breadcrumb-divider: '👉'">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Blog</a></li>
+          <li class="breadcrumb-item">Post</li>
+        </ol>
+      </nav>
+    </div>
+  </body>
+</html>

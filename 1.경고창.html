@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 페비콘 -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- 부트스트랩 JS(스타일이 아닌 동적인 변화) -->
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <title>Alerts 경고</title>
+    <style>
+      body {
+        padding: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- alerts : 기본 메시지창 -->
+    <div class="alert alert-primary">Simple alert message.</div>
+    <div class="alert alert-secondary">Simple alert message.</div>
+    <div class="alert alert-success">Simple alert message.</div>
+    <div class="alert alert-danger">Simple alert message.</div>
+    <div class="alert alert-warning">Simple alert message.</div>
+    <div class="alert alert-info">Simple alert message.</div>
+    <div class="alert alert-light">Simple alert message.</div>
+    <div class="alert alert-dark">Simple alert message.</div>
+    <!-- 링크 -->
+    <div class="alert alert-primary">
+      This is an alert <a href="#" class="alert-link">link.</a>
+    </div>
+    <div class="alert alert-secondary">
+      This is an alert <a href="#" class="alert-link">link.</a>
+    </div>
+    <div class="alert alert-success">
+      This is an alert <a href="#" class="alert-link">link.</a>
+    </div>
+    <!-- 경고 박스-->
+    <div class="alert alert-danger">
+      <h4 class="alert-heading">Alert Heading!</h4>
+      <hr />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam aliquam
+        exercitationem pariatur modi ab nobis nesciunt nostrum eum assumenda?
+        Dolores.
+      </p>
+    </div>
+    <!-- 아이콘이 들어감 -->
+    <div class="alert alert-primary d-flex">
+      <svg
+        width="24"
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+        ></path>
+      </svg>
+      <div class="ps-3">An example alert with an icon.</div>
+    </div>
+
+    <div class="alert alert-warning alert-dismissible fade show">
+      This is alert DISMISSING.
+      <button class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+  </body>
+</html>

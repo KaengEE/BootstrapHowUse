@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 페비콘 -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <!-- 부트스트랩 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- 부트스트랩 JS(스타일이 아닌 동적인 변화) -->
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <title>어코디언</title>
+    <style>
+      body {
+        padding: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ACCORDION -->
+
+    <div class="accordion" id="accordionParent">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            data-bs-target="#collapseOne"
+            data-bs-toggle="collapse"
+          >
+            코딩공부는 어떻게 하나요?
+          </button>
+        </h2>
+        <div
+          class="accordion-collapse collapse show"
+          id="collapseOne"
+          data-bs-parent="#accordionParent"
+        >
+          <div class="accordion-body">
+            <p>복습을 열심히 합니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            data-bs-target="#collapseTwo"
+            data-bs-toggle="collapse"
+          >
+            두번째 질문입니다.
+          </button>
+        </h2>
+        <div
+          class="accordion-collapse collapse"
+          id="collapseTwo"
+          data-bs-parent="#accordionParent"
+        >
+          <div class="accordion-body">
+            <p>두번째 답변입니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            data-bs-target="#collapseThree"
+            data-bs-toggle="collapse"
+          >
+            오늘 점심은 뭘까요?
+          </button>
+        </h2>
+        <div
+          class="accordion-collapse collapse"
+          id="collapseThree"
+          data-bs-parent="#accordionParent"
+        >
+          <div class="accordion-body">
+            <p>가까운데로 갑니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <hr />
+    <!-- ACCORDION FLUSH-->
+
+    <div class="accordion accordion-flush" id="accordionParent2">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            data-bs-target="#collapseOne2"
+            data-bs-toggle="collapse"
+          >
+            Lorem ipsum dolor sit amet.
+          </button>
+        </h2>
+        <div
+          class="accordion-collapse collapse show"
+          id="collapseOne2"
+          data-bs-parent="#accordionParent2"
+        >
+          <div class="accordion-body">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+              officia itaque ut blanditiis sed? Neque praesentium accusamus
+              sint, vel omnis inventore doloremque dolorum ducimus nulla.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            data-bs-target="#collapseTwo2"
+            data-bs-toggle="collapse"
+          >
+            Lorem ipsum dolor sit amet.
+          </button>
+        </h2>
+        <div
+          class="accordion-collapse collapse"
+          id="collapseTwo2"
+          data-bs-parent="#accordionParent2"
+        >
+          <div class="accordion-body">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+              officia itaque ut blanditiis sed? Neque praesentium accusamus
+              sint, vel omnis inventore doloremque dolorum ducimus nulla.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            data-bs-target="#collapseThree2"
+            data-bs-toggle="collapse"
+          >
+            Lorem ipsum dolor sit amet.
+          </button>
+        </h2>
+        <div
+          class="accordion-collapse collapse"
+          id="collapseThree2"
+          data-bs-parent="#accordionParent2"
+        >
+          <div class="accordion-body">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+              officia itaque ut blanditiis sed? Neque praesentium accusamus
+              sint, vel omnis inventore doloremque dolorum ducimus nulla.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
